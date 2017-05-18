@@ -71,7 +71,9 @@ The *table* element of the list contains the populations and they rarity and Kul
 
 The function *HCore(data, n)* is aimed to maximize the average Kullback-Leibler divergence from allele frequency *data* based on loci * accessions, to obtain a core subset of size *n*.
 
-To obtain a core subset of 10 accessions, , use the following instruction:
+#### Core subset selection
+
+To obtain a core subset of 10 accessions, use the following instruction:
 
 *core<-HCore(ndat,10)*
 
