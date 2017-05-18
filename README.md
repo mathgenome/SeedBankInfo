@@ -37,6 +37,48 @@ Histogram for rareness
 
 *hist(x$rareness)*
 
+### Script for locus-based biallelic data
+
+To expedite the analytical functions, I developed a series of scripts that use a table loci x accessions, instead of alleles x accessions. This applies only to biallelic data, like SNPs. The table has half of the rows of the one based on alleles. The information parameters are calculated much faster than with the original script.
+
+The script can be loaded in R through *source(“HCore.R”)*
+
+As an example, I use the toydata.csv set, based on alleles and accessions.
+
+Reading the data
+
+*dat<-read.csv("data/toyset.csv",head=T)*
+
+#### Estimate specificity, rarity and Kullback-Leibler divergence parameters.
+
+Eliminate the first two columns
+
+*sdat<-dat[,-c(1,2)]*
+
+Table with loci as rows
+
+*ndat<-HalfOdd(sdat)*
+
+Obtain the object with information parameters
+
+*x<-scoreBiallelic(ndat)*
+
+*names(x)*
+
+The *table* element of the list contains the populations and they rarity and Kulback  values
+
+*head(x$table)*
+
+The function *HCore(data, n)* is aimed to maximize the average Kullback-Leibler divergence from allele frequency *data* based on loci * accessions, to obtain a core subset of size *n*.
+
+To obtain a core subset of 10 accessions, , use the following instruction:
+
+*core<-HCore(ndat,10)*
+
+The output is a vector of accession names.
+
+
+
 
 >Note
 
