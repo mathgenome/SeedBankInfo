@@ -78,7 +78,7 @@ getMaxR<-function(sb){as.character(sb$table$pop[sb$table$divergence==max(sb$tabl
 #data is the dataframe of loci and accessions
 getMaxDeltaR<-function(data,cset){
 	#Define which accessions of data to add to cset
-	accessions<-names(data[,-c(1,2)])
+	accessions<-names(data)
 	accessions<-accessions[!is.element(accessions,cset)]	
 	#Obtain the average caused by each accession
 	a<-c()
