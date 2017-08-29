@@ -80,11 +80,25 @@ To obtain a core subset of 10 accessions, use the following instruction:
 The output is a vector of accession names.
 
 
+### HCoreA is fast implementation of HCore for core subset selection with big data sets. Once loaded, the functions for parameter estimation are the same. However, to select core subsets, HCoreA is used instead of HCore. The method gives an approximate, albeit much faster core subset optimization towards maximum average rareness. It applies only to biallelic data.
+
+To obtain a core subset of 10 accessions, use the following instruction:
+
+*core<-HCoreA(ndat,10)*
+
+The output is a vector of accession names.
+
+
+
 
 
 >Note
 
 	This is part of an ongoing joint MasAgro Biodiversidad project between Universidad Autónoma Agraria Antonio Narro and International Maize and Wheat Improvement Center (CIMMYT), in Mexico.
+
+
+
+
 
 
 
