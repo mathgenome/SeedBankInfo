@@ -1,20 +1,22 @@
 ### Data
 
-The directory “ArtificialDataSet” contains the file toySetPlos.csv, a table of dimension 6 x 6. The column **marker** is the locus number, **allele** is the allele number, and the remaining four columns are accessions. The numbers in the cells are allele frequencies. This is the worked example in the Reyes-Valdés et al. (2018) PLOS ONE paper.
+The directory “ArtificialDataSet” contains the file **toySetPlos.csv**, a table of dimension 6 x 6. The column *marker* is the locus number, *allele* is the allele number, and the remaining four columns are accessions. The numbers in the cells are allele frequencies. This is the worked example in the Reyes-Valdés et al. (2018) PLOS ONE paper.
 
-The directory “sampleData” contains the file **toyset.csv**, a table of dimension 100 x 52. The column **marker** is the locus number, **allele** is the allele number, and the remaining four columns are accessions. The numbers in the cells are allele frequencies. This a subset of wheat Mexican landrace accessions genotyped by SNPs, extracted from the publicly available repository at https://data.cimmyt.org/dataverse/seedsofdiscoverydvn in 2016.
+The directory “sampleData” contains the file **toyset.csv**, a table of dimension 100 x 52. The column *marker* is the locus number, *allele* is the allele number, and the remaining four columns are accessions. The numbers in the cells are allele frequencies. This a subset of wheat Mexican landrace accessions genotyped by SNPs, extracted from the publicly available repository at https://data.cimmyt.org/dataverse/seedsofdiscoverydvn in 2016.
 
 The directory “WheatData” contains three files:
 
 - **AllDataHexaploid.bin**. A table in RData format, readable by R through the function *load*. It has a dimension 41052 x 7987. The column allele_id is the SNP allele id, and the remaining 7986 columns are hexaploid wheat accessions. The numbers in the cells are allele frequencies. This table was used to calculate specificities in the Reyes-Valdés et al. (2018) PLOS ONE paper. The original source of the data is:
 
-Vikram P, Franco J, Burguen ̃o-Ferreira J, Li H, Sehgal D, Saint Pierre C, et al. Unlocking the genetic diversity of Creole wheats. Sci Rep. 2016;6.
+Vikram P, Franco J, Burgueño-Ferreira J, Li H, Sehgal D, Saint Pierre C, et al. Unlocking the genetic diversity of Creole wheats. Sci Rep. 2016;6.
 
 Originally retrieved from:
 
 Singh S, Sansaloni C, Petroli C, Ellis M, Kilian A. DArTseq-derived SNPs for wheat Mexican landrace accessions; 2014. http://hdl.handle.net/11529/10013, International Maize and Wheat Improvement Center [Distributor] V4 [Version].
 
-- **SampleLowNA_Trim.bin**. A table in RData format, readable by R through the function *load*. Filtered data set with the nearly 10% lowest missing data, comprising 4,126 alleles (2,063 SNP loci) for 7,986 creole hexaploid wheat accessions. The table was trimmed to have only progressive marker and allele numbers as first two columns. This data set was used for the paper “An informational view of accession rarity and allele specificity in germplasm banks for management and conservation”, Reyes-Valdés et al., 2018. PLOS ONE.
+- **SampleLowNA_Trim.bin**. A table in RData format, readable by R through the function *load*. Filtered data set with the nearly 10% lowest missing data from *AllDataHexaploid.bin*, comprising 4,126 alleles (2,063 SNP loci) for 7,986 creole hexaploid wheat accessions. The table was trimmed to have only progressive marker and allele numbers as first two columns. This data set was used for the paper “An informational view of accession rarity and allele specificity in germplasm banks for management and conservation”, Reyes-Valdés et al., 2018. PLOS ONE. 
+
+- **SampleLowNA_Trim.csv**. A csv version of *SampleLowNA_Trim.bin*
 
 
 
